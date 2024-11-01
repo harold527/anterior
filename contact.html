@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan's Café - Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/logo.webp" alt="Bryan's Café Logo" class="logo" onclick="inicioO()">
+        <nav>
+            <a href="index.html">About</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <input type="text" id="firstName" placeholder="First Name" required>
+                <input type="text" id="lastName" placeholder="Last Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <select id="subject">
+                    <option value="">Select Subject</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Reservation">Reservation</option>
+                    <option value="Feedback">Feedback</option>
+                </select>
+                <textarea id="message" placeholder="Your message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div id="confirmationMessage" class="hidden">Thank you for reaching out!</div>
+        </section>
+        <section class="branches">
+            <h2>Our Locations</h2>
+            <div id="branches-list">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Bryan's Café. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>

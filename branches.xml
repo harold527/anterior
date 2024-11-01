@@ -1,0 +1,15 @@
+<!DOCTYPE branches SYSTEM "dtds/branches.dtd">
+<branches>
+    <branch>
+        <address>123 Coffee Street, Cityville</address>
+        <phone>(123) 456-7890</phone>
+        <hours>Mon - Fri: 6:00 to 14:30, Sat-Sun: 7:00 to 15:00</hours>
+        <map>https://maps.google.com/?q=123+Coffee+Street</map>
+    </branch>
+    <branch>
+        <address>456 Brew Ave, Townsville</address>
+        <phone>(987) 654-3210</phone>
+        <hours>Mon - Fri: 7:00 to 16:00, Sat-Sun: 8:00 to 14:00</hours>
+        <map>https://maps.google.com/?q=456+Brew+Ave</map>
+    </branch>
+</branches>

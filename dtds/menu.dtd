@@ -1,0 +1,6 @@
+<!ELEMENT menu (dessert+)>
+<!ELEMENT dessert (name, description, price, image)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT image (#PCDATA)>

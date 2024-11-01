@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE menu [
+    <!ELEMENT menu (dessert+)>
+    <!ELEMENT dessert (name, description, price, image)>
+    <!ATTLIST dessert id ID #REQUIRED>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+    <!ELEMENT image (#PCDATA)>
+    <!ATTLIST image format (jpg|png|webp) #IMPLIED>
+]>
+<menu>
+    <dessert id="d1">
+        <name>Chocolate Cake</name>
+        <description>Rich and moist chocolate cake.</description>
+        <price>$5.00</price>
+        <image format="webp">images/dessert1.webp</image>
+    </dessert>
+    <dessert id="d2">
+        <name>Lemon Tart</name>
+        <description>Freshly baked tart with a zesty lemon filling.</description>
+        <price>$4.50</price>
+        <image format="webp">images/dessert2.webp</image>
+    </dessert>
+    <dessert id="d3">
+        <name>Apple Pie</name>
+        <description>A classic apple pie with a buttery crust.</description>
+        <price>$4.00</price>
+        <image format="webp">images/dessert3.webp</image>
+    </dessert>
+</menu>

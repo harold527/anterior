@@ -1,5 +1,7 @@
-<!ELEMENT menu (dessert+)>
-<!ELEMENT dessert (name, description, price, image)>
+<!ELEMENT menu (meals+, beverages+, beveragesO+)>
+<!ELEMENT meals (name, description, price, image)>
+<!ELEMENT beverages (name, price, image)>
+<!ELEMENT beveragesO (name, price, image)>
 <!ELEMENT name (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
 <!ELEMENT price (#PCDATA)>

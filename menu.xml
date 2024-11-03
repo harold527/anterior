@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE menu [
-    <!ELEMENT menu (dessert+)>
-    <!ELEMENT dessert (name, description, price, image)>
-    <!ATTLIST dessert id ID #REQUIRED>
+    <!ELEMENT menu (meals+, beverages+, beveragesO+)>
+    <!ELEMENT meals (name, description, price, image)>
+    <!ELEMENT beverages (name, price, image)>
+    <!ELEMENT beveragesO (name, price, image)>
+    <!ATTLIST meals id ID #REQUIRED>
+    <!ATTLIST beverages id ID #REQUIRED>
+	<!ATTLIST beveragesO id ID #REQUIRED>
     <!ELEMENT name (#PCDATA)>
     <!ELEMENT description (#PCDATA)>
     <!ELEMENT price (#PCDATA)>
@@ -10,22 +14,69 @@
     <!ATTLIST image format (jpg|png|webp) #IMPLIED>
 ]>
 <menu>
-    <dessert id="d1">
-        <name>Chocolate Cake</name>
-        <description>Rich and moist chocolate cake.</description>
-        <price>$5.00</price>
-        <image format="webp">images/dessert1.webp</image>
-    </dessert>
-    <dessert id="d2">
-        <name>Lemon Tart</name>
-        <description>Freshly baked tart with a zesty lemon filling.</description>
-        <price>$4.50</price>
-        <image format="webp">images/dessert2.webp</image>
-    </dessert>
-    <dessert id="d3">
-        <name>Apple Pie</name>
-        <description>A classic apple pie with a buttery crust.</description>
+    <meals id="d1">
+        <name>Beetroot and feta salad</name>
+        <description>Suitable for vegetarians, made with fresh beetroot.</description>
+        <price>$15.00</price>
+        <image format="webp">images/beetrootSalad.png</image>
+    </meals>
+    <meals id="d2">
+        <name>Sourdough Rye Sandwich</name>
+        <description>Cheese and salad sandwich made with organic, sourdough rye bread.</description>
+        <price>$18.00</price>
+        <image format="webp">images/sandwich.png</image>
+    </meals>
+    <meals id="d3">
+        <name>Spinach Pie and salad</name>
+        <description>Tasty pie with salad.</description>
+        <price>$20.00</price>
+        <image format="webp">images/SpinachPie.png</image>
+    </meals>
+	
+    <meals id="d4">
+        <name>Feta pancakes with salad</name>
+        <description>Tasty pancake filled with feta and salad.</description>
         <price>$4.00</price>
-        <image format="webp">images/dessert3.webp</image>
-    </dessert>
+        <image format="webp">images/fetaSalad.jpg</image>
+    </meals>
+	
+	
+    <beverages id="d5">
+        <name>Small</name>
+        <description></description>
+        <price>$3.50</price>
+        <image format="webp">images/small.jpg</image>
+    </beverages>
+	<beverages id="d6">
+        <name>Regular</name>
+        <description></description>
+        <price>$4.00</price>
+        <image format="webp">images/regular.jpg</image>
+    </beverages>
+	<beverages id="d7">
+        <name>Large</name>
+        <description></description>
+        <price>$4.50</price>
+        <image format="webp">images/large.jpg</image>
+    </beverages>
+
+
+	<beveragesO id="d8">
+        <name>Soda</name>
+        <description></description>
+        <price>$3.00</price>
+        <image format="webp">images/soda.jpg</image>
+    </beveragesO>
+	<beveragesO id="d9">
+        <name>Fresh juice</name>
+        <description></description>
+        <price>$6.00</price>
+        <image format="webp">images/juice.jpg</image>
+    </beveragesO>
+	<beveragesO id="d10">
+        <name>Bottled water</name>
+        <description></description>
+        <price>$2.00</price>
+        <image format="webp">images/water.jpg</image>
+    </beveragesO>
 </menu>

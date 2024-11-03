@@ -26,14 +26,18 @@ function loadXML(file, callback) {
 }
 
 function displayDesserts(xml) {
-    const desserts = xml.getElementsByTagName('dessert');
-    const grid = document.getElementById('dessert-grid');
+    const mealss = xml.getElementsByTagName('meals');
+    const grid = document.getElementById('meals-grid');
+	const beveragess = xml.getElementsByTagName('beverages');
+	const grid2 = document.getElementById('meals-grid-beverages');
+	const beveragesso = xml.getElementsByTagName('beveragesO');
+	const grid3 = document.getElementById('meals-grid-beverages-other');
     if (grid) {
-        Array.from(desserts).forEach(dessert => {
-            const name = dessert.getElementsByTagName('name')[0]?.textContent || 'No Name';
-            const description = dessert.getElementsByTagName('description')[0]?.textContent || 'No Description';
-            const price = dessert.getElementsByTagName('price')[0]?.textContent || 'Price Not Available';
-            const image = dessert.getElementsByTagName('image')[0]?.textContent || 'images/default.jpg';
+        Array.from(mealss).forEach(meals => {
+            const name = meals.getElementsByTagName('name')[0]?.textContent || 'No Name';
+            const description = meals.getElementsByTagName('description')[0]?.textContent || 'No Description';
+            const price = meals.getElementsByTagName('price')[0]?.textContent || 'Price Not Available';
+            const image = meals.getElementsByTagName('image')[0]?.textContent || 'images/default.jpg';
 
             const card = document.createElement('div');
             card.className = 'card';
@@ -44,6 +48,43 @@ function displayDesserts(xml) {
                 <p><strong>${price}</strong></p>
             `;
             grid.appendChild(card);
+        });
+    }
+	
+	    if (grid2) {
+        Array.from(beveragess).forEach(beverages => {
+            const name = beverages.getElementsByTagName('name')[0]?.textContent || 'No Name';
+
+            const price = beverages.getElementsByTagName('price')[0]?.textContent || 'Price Not Available';
+            const image = beverages.getElementsByTagName('image')[0]?.textContent || 'images/default.jpg';
+
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${image}" alt="${name}">
+                <h3>${name}</h3>
+
+                <p><strong>${price}</strong></p>
+            `;
+            grid2.appendChild(card);
+        });
+    }
+		if (grid3) {
+        Array.from(beveragesso).forEach(beveragesO => {
+            const name = beveragesO.getElementsByTagName('name')[0]?.textContent || 'No Name';
+
+            const price = beveragesO.getElementsByTagName('price')[0]?.textContent || 'Price Not Available';
+            const image = beveragesO.getElementsByTagName('image')[0]?.textContent || 'images/default.jpg';
+
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <img src="${image}" alt="${name}">
+                <h3>${name}</h3>
+
+                <p><strong>${price}</strong></p>
+            `;
+            grid3.appendChild(card);
         });
     }
 }
